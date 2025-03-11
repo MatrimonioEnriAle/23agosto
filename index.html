@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrimonio Enri e Ale</title>
+    <style>
+        
+        /* Impostazioni generali */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            background-color:white;
+        }
+
+
+/* Sfondo principale */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('SfondoSitoMatrimonio.png');
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+/* Quando lo schermo è più piccolo (mobile) */
+@media screen and (max-width: 768px) {
+    .background {
+        background-size: contain; /* Mostra tutta l'immagine */
+        background-position: top left; /* Centra l'immagine */
+        background-attachment: scroll; /* Evita problemi con fixed su mobile */
+        width: 100%; /* Altezza adattabile */
+    }
+}
+
+        /* Stile per la sezione "Luogo" */
+.homepage {
+    max-width: 800px;
+    margin: 0 auto; /* Centra orizzontalmente */
+      text-align: center;
+    padding: 10px 10px;
+ 
+}
+
+
+        /* Titolo */
+        h1 {
+
+                display: block;  
+    max-width: 800px;
+    margin: 0 auto; /* Centra orizzontalmente */
+                padding: 10px 10px;
+    text-align: center; /* Centra il testo */
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+background-color:white;
+            color:#c6e9f9;
+        }
+
+
+
+.description {
+    display: block;  
+    max-width: 800px;
+    margin: 0 auto; /* Centra orizzontalmente */
+    text-align: center; /* Centra il testo */
+    font-size: 2em;
+    line-height: 1.6;
+            font-family: 'Dancing Script', cursive;
+    color: black;
+    position: relative; /* Si mantiene nel flusso del documento */
+background-color:white;
+        padding: 10px 10px;
+}
+
+
+
+        /* Logo del sito */
+/* Logo */
+.logo {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;  /* Centra orizzontalmente */
+    align-items: center;      /* Centra verticalmente */
+    height: auto;
+}
+
+/* Immagine del logo */
+.logo img {
+    max-width: 100%; /* Assicura che il logo non esca dal contenitore */
+    height: auto;    /* Mantiene le proporzioni del logo */
+    max-height: 350px; /* Imposta una altezza massima per il logo */
+}
+
+/* Media Query per schermi mobili */
+@media screen and (max-width: 768px) {
+    .logo img {
+        max-height: 220px; /* Puoi ridurre la dimensione del logo su dispositivi mobili */
+    }
+}
+
+
+        /* Immagine finale sotto il testo */
+/* Immagine finale sotto il testo */
+        /* Immagine finale sotto il testo */
+.footer-image {
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; /* Spazio sopra e sotto l'immagine */
+    text-align: center;
+    float: center;
+}
+
+.footer-image img {
+    background-color: transparent;
+    width: 90%; /* Occupa il 90% della larghezza disponibile */
+    max-width: 600px; /* Non supera i 600px su schermi grandi */
+    height: auto; /* Mantiene le proporzioni */
+    border-radius: 10px; /* Arrotonda leggermente i bordi */
+}
+
+
+        /* Stile per la sezione "Luogo" */
+.location-section {
+    max-width: 800px;
+    margin: 0 auto; /* Centra orizzontalmente */
+      text-align: center;
+    padding: 10px 10px;
+ 
+    color: white; /* Mantiene il testo leggibile */
+}
+
+.location-section h2 {
+    color:#c6e9f9;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-color:white;
+}
+
+.location-section p {
+    background-color: white;
+    font-size: 1.2em;
+    color:black;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+ .map-section {
+
+    text-align: center;
+    margin-top: 10px;
+    padding: 0px 0px;
+ 
+    color: transparent;
+}
+
+        /* Sezione Mappa */
+        /* Per schermi più piccoli */
+        @media screen and (max-width: 768px) {
+            .map-section iframe {
+     width: 90%; /* Occupa il 90% della larghezza disponibile */
+    max-width: 600px; /* Non supera i 600px su schermi grandi */
+    height: auto; /* Mantiene le proporzioni */
+                min-height: 350px;
+            }
+        }
+
+        /* Per schermi molto grandi */
+        @media screen and (min-width: 1024px) {
+            .map-section iframe {
+            width: 90%; /* Occupa il 90% della larghezza disponibile */
+    max-width: 600px; /* Non supera i 600px su schermi grandi */
+    height: auto; /* Mantiene le proporzioni */
+                      min-height: 350px;
+            }
+        }
+
+
+        .travel-section {
+     max-width: 800px;
+    margin: 0 auto; /* Centra orizzontalmente */
+    text-align: center;
+    padding: 40px 10px;
+
+    color: white;
+}
+
+.travel-section h2 {
+    background-color:white;
+color:#c6e9f9;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.travel-section p {
+    background-color: white;
+    font-size: 1.2em;
+    color:black;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+        .musica-section {
+        max-width: 800px;
+    margin: 0 auto; /* Centra orizzontalmente */
+    text-align: center; /* Centra il testo */
+    text-align: center;
+    padding: 40px 10px;
+
+    color: white;
+}
+
+.musica-section h2 {
+    background-color:white;
+color:#c6e9f9;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.musica-section p {
+    background-color: white;
+    font-size: 1.2em;
+    color:black;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+                .foto-section {
+      max-width: 800px;
+    margin: 0 auto; /* Centra orizzontalmente */
+    text-align: center; /* Centra il testo */
+    text-align: center;
+    padding: 40px 20px;
+
+    color: white;
+}
+
+.foto-section h2 {
+    background-color:white;
+color:#c6e9f9;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.foto-section p {
+    background-color: white;
+    font-size: 1.2em;
+    color:black;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+                        .cibo-section {
+       max-width: 800px;
+    margin: 0 auto; /* Centra orizzontalmente */
+    text-align: center; /* Centra il testo */
+    text-align: center;
+    padding: 40px 20px;
+  
+    color: white;
+}
+
+.cibo-section h2 {
+    background-color:white;
+color:#c6e9f9;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.cibo-section p {
+    background-color: white;
+    font-size: 1.2em;
+    color:black;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Sezione principale con sfondo -->
+    <div class="background">
+        
+    </div>
+        <!-- Logo del sito -->
+        <div class="logo">
+            <img src="LOGO_noBG.png" alt="Logo Matrimonio Enri e Ale">
+        </div>
+         
+<p>
+        <div class="homepage">
+        <!-- Titolo -->
+        <h1>Benvenuti al nostro matrimonio</h1>
+</p>
+        <p>
+        <!-- Descrizione -->
+        <div class="description">
+            <p>Insieme, con amore e felicità, stiamo costruendo il nostro sogno. </br>Non vediamo l'ora di condividere con voi questo momento speciale della nostra vita. </br>In questa pagina troverete tutte le informazioni per festeggiare insieme a noi.</p>
+        </div>
+        </div>
+   
+</p>
+    <p>
+    <!-- Immagine finale sotto il testo -->
+<div class="footer-image">
+    <img src="EnriAleDisney.jpeg" alt="Enri e Ale Disney">
+</div>
+</p>
+    <p>
+    <!-- Sezione "Luogo" -->
+<div class="location-section">
+    <h2>Luogo</h2>
+    <p>⏰ <i>Sabato 23 Agosto 2025, alle ore 16:00</i></p>
+    <p>⛪️ <b>Cerimonia</b>: Santuario della Madonnina del Boschetto, via Madonna del Boschetto, 54 - Castel Mella (BS)</p>
+    <p>🍽️ <b>Ristorante</b>: Corte Piovanelli, via Caselle, 5 - Brescia</p>
+   </div>
+</p>
+<!-- Mappa di Google con il percorso -->
+<div class="map-section">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d22367.179544863906!2d10.138629730886407!3d45.5121430987625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4781740b100d8797%3A0x2a2c1afa37dfe987!2sSantuario%20Madonnina%20Del%20Boschetto%2C%20Via%20Madonna%20del%20Boschetto%2C%20Castel%20Mella%20BS!3m2!1d45.511544!2d10.144831199999999!4m5!1s0x478174391494b601%3A0x6d221bc52e3533e6!2sCorte%20Piovanelli%2C%20Via%20Caselle%2C%20Brescia%2C%20BS!3m2!1d45.5105461!2d10.1722345!5e0!3m2!1sit!2sit!4v1741269969699!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+<!-- Sezione Viaggio -->
+<div class="travel-section">
+    <h2>Viaggio</h2>
+    <p>✈️ Se desiderate contribuire a rendere realtà il nostro viaggio di nozze, ve ne saremmo infinitamente grati. Ogni piccolo gesto ci aiuterà a realizzare questo sogno insieme. 🌍🌅</p>
+    <p><b>IBAN:</b> ITXXXXXXXXXXXXXXXX </p> <!-- Sostituisci con il tuo IBAN reale -->
+</div>
+
+    <!-- Sezione Musica -->
+<div class="musica-section">
+    <h2>Musica</h2>
+    <p>🎵 A questo link trovate la playlist Spotify della festa! Aggiungete le canzoni che volete cantare e ballare insieme a noi… sorprendeteci! 🎧💃🕺</p>
+    <p><a href="https://open.spotify.com/playlist/4leABQvEOYMQeqr4Sja2MS8fA&pt=ead8d831d014a9eebe2e32b30538abef&pi=ccEkrfm_TXOvZ">PLAYLIST</a> </p> 
+</div>
+
+        <!-- Sezione cibo -->
+<div class="cibo-section">
+    <h2>Cibo</h2>
+    <p>🍝 Se avete allergie, intolleranze alimentari o seguite un’alimentazione vegetariana, vegana, oppure preferite un menù senza carne o pesce, vi invitiamo a compilare il seguente questionario per segnalarcelo. Vogliamo assicurarci che tutti possano godersi il banchetto senza preoccupazioni! 🍽️✨</p>
+    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScqGo6yFXCHj_omkTWr3Z-OYx1vHkF-pdkxZ09JZP_Fr1vItQ/viewform?usp=dialog">QUESTIONARIO ALLERGIE</a> </p> 
+</div>
+
+    <!-- Sezione Foto -->
+<div class="foto-section">
+    <h2>Foto</h2>
+    <p>🎥 Cattura i momenti più belli del nostro giorno speciale! 📸✨ Scarica l’app <a href="https://www.wedshoots.com/it?albumId=IT19dfcb7c">WedShoots</a> e condividi con noi tutte le foto del matrimonio in un unico album. Utilizza questo codice per l'album "IT19dfcb7c", unisciti alla festa e aiutaci a creare ricordi indimenticabili! 💕🎉 </p>
+</br>
+</br>
+    <p>📸 Dopo il matrimonio, in questa sezione, troverete il link per poter scaricare tutti i meravigliosi scatti della festa, per rivivere insieme i momenti più emozionanti di quel giorno speciale! 💕</p>
+   </div>
+
+    
+</body>
+</html>
