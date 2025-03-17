@@ -35,11 +35,12 @@
 /* Quando lo schermo è più piccolo (mobile) */
 @media screen and (max-width: 768px) {
     .background {
-            position: fixed;
-        background-size: contain; /* Mostra tutta l'immagine */
-        background-position: top left; /* Centra l'immagine */
-          background-attachment: fixed;
-        width: 100%; /* Altezza adattabile */
+    width: 100vw;  /* Occupa tutta la larghezza dello schermo */
+    height: 100vh; /* Occupa tutta l'altezza dello schermo */
+    object-fit: cover; /* Ritaglia l'immagine per riempire lo spazio senza distorsioni */
+    display: block; /* Rimuove eventuali spazi indesiderati */
+            background-image: url('SfondoCell.png');
+        
     }
 }
 
